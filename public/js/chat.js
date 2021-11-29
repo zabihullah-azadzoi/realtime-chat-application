@@ -63,17 +63,29 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 locationButton.addEventListener("click", (e) => {
   locationButton.setAttribute("disabled", "disabled");
-  navigator.geolocation.getCurrentPosition((success, error) => {
-    if (success) {
-      socket.emit("shareLocation", {
-        latitude: success.coords.latitude,
-        longitude: success.coords.longitude,
-      });
-    } else {
-      console.log("this feature is not supported by your browser");
-    }
-    locationButton.removeAttribute("disabled");
-  });
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 10000,
+    maximumAge: 0,
+  };
+  navigator.geolocation.getCurrentPosition(
+    (success) => {
+      if (success) {
+        socket.emit("shareLocation", {
+          latitude: success.coords.latitude,
+          longitude: success.coords.longitude,
+        });
+      } else {
+        alert("this feature is not supported by your browser");
+      }
+      locationButton.removeAttribute("disabled");
+    },
+    (error) => {
+      alert(error.message);
+      locationButton.removeAttribute("disabled");
+    },
+    options
+  );
 });
 
 socket.emit("join", location.search, (error) => {
