@@ -1,0 +1,287 @@
+.background {
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: #d8e3e7;
+}
+#my-message {
+  align-self: flex-end;
+  border-radius: 14px;
+  border-start-end-radius: 0px;
+  margin-right: 4px;
+}
+.main {
+  background-color: rgba(255, 255, 255, 0.952);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 16px;
+  border-radius: 5px;
+}
+label {
+  font-size: 20px;
+  color: rgb(92, 92, 92);
+  margin: 4px 0;
+}
+
+.login-input {
+  padding: 16px;
+  margin-bottom: 13px;
+}
+.join-button {
+  margin: 22px 0;
+  padding: 10px 0;
+  border: none;
+  color: white;
+  background-color: #77e4d4;
+  outline: none;
+}
+.main-container {
+  display: flex;
+  height: 70vh;
+  box-shadow: 1px 11px 35px 1px rgb(173, 172, 172);
+}
+.sidebar {
+  background-color: #002366;
+  width: 15vw;
+}
+.messagebar {
+  background-color: #e8f6ef;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+  position: relative;
+}
+.create-message-form {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  column-gap: 5px;
+}
+.message-input {
+  width: 100%;
+  font-size: 30px;
+  color: grey;
+  border: 1px grey solid;
+  outline: none;
+}
+
+.location-button,
+.send-button {
+  padding: 12px;
+  border: none;
+  background-color: #a2dbfa;
+  color: rgb(94, 94, 94);
+}
+.location-button:hover {
+  background-color: #8ac0dd;
+  transition: all 0.2s ease-in-out;
+}
+.send-button:hover {
+  background-color: #8ac0dd;
+  transition: all 0.2s ease-in-out;
+}
+.userName {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-right: 40px;
+  font-family: "Caveat", cursive;
+  font-family: "Genos", sans-serif;
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-family: "Play", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: rgb(90, 90, 90);
+}
+
+.message-body {
+  overflow: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 92, 92);
+}
+.message-container {
+  background-color: #b4c6a6;
+  width: fit-content;
+  max-width: 400px;
+  padding: 8px 15px;
+  padding-bottom: 1px;
+  border-radius: 14px;
+  border-start-start-radius: 0px;
+  margin: 10px 2px;
+  line-break: anywhere;
+}
+.message-paragraph {
+  display: flex;
+  justify-content: space-between;
+}
+.createdAt {
+  font-size: 15px;
+}
+.message-text {
+  font-family: "Caveat", cursive;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.sidebar {
+  color: white;
+  z-index: 10;
+}
+
+.room-name {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 34px;
+  margin: 21px 15px;
+  color: greenyellow;
+}
+.user-container {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.user {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgb(214, 130, 130);
+  text-align: center;
+}
+.online-mode {
+  background-color: rgb(22, 219, 22);
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+.fas,
+.far {
+  cursor: pointer;
+}
+.fas {
+  color: greenyellow;
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+/* humberger menu icon style */
+.container {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+.bar {
+  background-color: white;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(160, 159, 159);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* login page */
+
+@media screen and (max-width: 900px) {
+  .main-container {
+    width: 90vw;
+  }
+  .login-container {
+    width: 90vw;
+  }
+  .room-name {
+    font-size: 22px;
+    margin-top: 60px;
+    margin-bottom: 45px;
+  }
+  .sidebar {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: inline-block;
+  }
+  .sidebar {
+    display: none;
+    position: absolute;
+    height: 100%;
+  }
+  .location-button,
+  .send-button {
+    padding: 3px;
+  }
+  .message-container {
+    margin: 12px 5px;
+    max-width: 280px;
+    padding: 1px 12px;
+  }
+  .message-body {
+    margin-top: 40px;
+  }
+  .userName {
+    font-size: 19px;
+  }
+  .bar {
+    width: 34px;
+    height: 5px;
+  }
+  .login-container {
+    height: 60vh;
+  }
+  .main {
+    height: 100%;
+  }
+  .login-input {
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  .message-input {
+    font-size: 20px;
+  }
+  .main-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
